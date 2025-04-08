@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking | Malha Tours and Travel Africa</title>
+  <link rel="stylesheet" href="css/booking.css" />
+  <link rel="stylesheet" href="css/navfoot.css" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">
+      <img src="images/logo2.png" alt="Logo" />
+    </div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="destination.html">Destinations</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="booking.html" class="active">Booking</a>
+    </nav>
+  </header>
+
+  <!-- Step Indicator -->
+  <div class="step-indicator">
+    <div class="step active">1<span>Enter Details</span></div>
+    <div class="step">2<span>Confirmation</span></div>
+  </div>
+
+  <!-- Booking Form -->
+  <main class="booking-container">
+    <h2>Make a Booking</h2>
+
+    <!-- Step 1: Booking Form -->
+    <form id="booking-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">First Name *</label>
+          <input type="text" id="fname" required />
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name *</label>
+          <input type="text" id="lname" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="mobile">Mobile *</label>
+          <input type="text" id="mobile" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text" id="city" />
+        </div>
+        <div class="form-group">
+          <label for="country-select">Country *</label>
+          <select id="country-select" required>
+            <option value="">Select Country</option>
+            <option>Algeria</option>
+            <option>Angola</option>
+            <option>Benin</option>
+            <option>Botswana</option>
+            <option>Burkina Faso</option>
+            <option>Burundi</option>
+            <option>Cabo Verde</option>
+            <option>Cameroon</option>
+            <option>Central African Republic</option>
+            <option>Chad</option>
+            <option>Comoros</option>
+            <option>Republic of the Congo</option>
+            <option>Democratic Republic of the Congo</option>
+            <option>Côte d'Ivoire</option>
+            <option>Djibouti</option>
+            <option>Egypt</option>
+            <option>Equatorial Guinea</option>
+            <option>Eritrea</option>
+            <option>Eswatini</option>
+            <option>Ethiopia</option>
+            <option>Gabon</option>
+            <option>Gambia</option>
+            <option>Ghana</option>
+            <option>Guinea</option>
+            <option>Guinea-Bissau</option>
+            <option>Kenya</option>
+            <option>Lesotho</option>
+            <option>Liberia</option>
+            <option>Libya</option>
+            <option>Madagascar</option>
+            <option>Malawi</option>
+            <option>Mali</option>
+            <option>Mauritania</option>
+            <option>Mauritius</option>
+            <option>Morocco</option>
+            <option>Mozambique</option>
+            <option>Namibia</option>
+            <option>Niger</option>
+            <option>Nigeria</option>
+            <option>Rwanda</option>
+            <option>Sao Tome and Principe</option>
+            <option>Senegal</option>
+            <option>Seychelles</option>
+            <option>Sierra Leone</option>
+            <option>Somalia</option>
+            <option>South Africa</option>
+            <option>South Sudan</option>
+            <option>Sudan</option>
+            <option>Tanzania</option>
+            <option>Togo</option>
+            <option>Tunisia</option>
+            <option>Uganda</option>
+            <option>Zambia</option>
+            <option>Zimbabwe</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="description">Description *</label>
+          <textarea id="description" rows="5" required placeholder="What type of tour are you interested in?"></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="btn confirm">Next</button>
+    </form>
+
+    <!-- Step 2: Confirmation Section -->
+    <div id="confirmation-section" style="display: none;">
+      <h3>Please Confirm Your Booking</h3>
+      <p><strong>Name:</strong> <span id="confirm-name"></span></p>
+      <p><strong>Mobile:</strong> <span id="confirm-mobile"></span></p>
+      <p><strong>Email:</strong> <span id="confirm-email"></span></p>
+      <p><strong>City:</strong> <span id="confirm-city"></span></p>
+      <p><strong>Country:</strong> <span id="confirm-country"></span></p>
+      <p><strong>Description:</strong> <span id="confirm-description"></span></p>
+      <button id="edit-booking" class="btn confirm">Edit Details</button>
+      <button id="confirm-booking" class="btn confirm">Confirm Booking</button>
+      
+    </div>
+
+    <!-- Final Message -->
+    <div id="final-message" style="display: none;">
+      <p>🎉 Thank you for booking with Malha Tours & Travel. We will contact you shortly to finalize your request.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <h4>Find us here</h4>
+      <p>
+        <a href="#">Facebook</a> | <a href="#">Instagram</a>
+      </p>
+    </div>
+    <div>
+      <h4>Contact us</h4>
+      <p>You can reach us on:</p>
+      <p>076595488</p>
+      <p>0759100141</p>
+      <p>0753293589</p>
+      <p>maihatours@gmail.com</p>
+    </div>
+    <div>
+      <h4>Location</h4>
+      <p>Munyonyo, Uganda</p>
+      <p>Olives Complex</p>
+      <p>Ground floor, Office 005</p>
+    </div>
+    <div class="footer-bottom">
+      <p>All Rights Reserved to Malha Tours and Travel Africa Limited</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#country-select').select2({ placeholder: "Select Country", width: '100%' });
+
+      $('#booking-form').on('submit', function (e) {
+        e.preventDefault();
+
+        // Fill confirmation data
+        $('#confirm-name').text($('#fname').val() + ' ' + $('#lname').val());
+        $('#confirm-mobile').text($('#mobile').val());
+        $('#confirm-email').text($('#email').val());
+        $('#confirm-city').text($('#city').val());
+        $('#confirm-country').text($('#country-select').val());
+        $('#confirm-description').text($('#description').val());
+
+        // Show confirmation
+        $('.step').removeClass('active');
+        $('.step').eq(1).addClass('active');
+
+        $('#booking-form').hide();
+        $('#confirmation-section').fadeIn();
+      });
+
+      $('#edit-booking').on('click', function () {
+        $('#confirmation-section').hide();
+        $('#booking-form').fadeIn();
+        $('.step').removeClass('active');
+        $('#step-1').addClass('active');
+      });
+
+      $('#confirm-booking').on('click', function () {
+        $('#confirmation-section').hide();
+        $('#final-message').fadeIn();
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
