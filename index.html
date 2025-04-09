@@ -16,7 +16,8 @@
   <div class="logo">
     <img src="images/logo2.PNG" alt="Malha Logo" />
   </div>
-  <nav>
+  <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+  <nav id="nav-menu">
     <a href="home.html" class="active">Home</a>
     <a href="destination.html">Destinations</a>
     <a href="services.html">Services</a>
@@ -30,9 +31,9 @@
   <div class="slider" id="slider">
     <img src="images/hom.png" alt="Slide 1" class="active">
     <img src="images/plane.jpeg" alt="Slide 2">
-    <img src="images/home3.jpg" alt="Slide 3">
-    <img src="images/dream.jpeg" alt="Slide 4">
-    <img src="images/egypt.jpg" alt="Slide 4">
+    <img src="images/home10.png" alt="Slide 3">
+    <img src="images/tanzania.jpg" alt="Slide 4">
+    <img src="images/home5.jpg" alt="Slide 4">
     <img src="images/country.jpg" alt="Slide 4">
     <img src="images/home7.jpg" alt=" 4">
     
@@ -110,6 +111,23 @@
       slides[current].classList.add('active');
     }, 2000);
   </script>
-
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav-menu");
+  
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  </script>
+  <!-- <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav-menu');
+  
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script> -->
+  
+  
 </body>
 </html>
