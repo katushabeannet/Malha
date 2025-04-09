@@ -102,4 +102,83 @@ body {
   footer p {
     margin: 5px 0;
   } */
-  
+  /* Tablets (≤ 768px) */
+@media (max-width: 768px) {
+  .slider {
+    height: 400px;
+  }
+
+  .slider img {
+    height: 400px;
+  }
+
+  .intro h2 {
+    font-size: 24px;
+  }
+
+  .intro p {
+    font-size: 16px;
+  }
+
+  .gallery img {
+    height: 180px;
+  }
+
+  .about h3 {
+    font-size: 22px;
+  }
+
+  .about p {
+    font-size: 15px;
+  }
+}
+
+/* Phones (≤ 480px) */
+@media (max-width: 480px) {
+  .slider {
+    height: 300px;
+  }
+
+  .slider img {
+    height: 300px;
+  }
+
+  .intro {
+    padding: 20px 10px;
+  }
+
+  .intro h2 {
+    font-size: 20px;
+  }
+
+  .intro p {
+    font-size: 14px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .gallery img {
+    height: 160px;
+  }
+
+  .about {
+    padding: 20px 10px;
+  }
+
+  .about h3 {
+    font-size: 18px;
+  }
+
+  .about p {
+    font-size: 14px;
+  }
+
+  .about button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

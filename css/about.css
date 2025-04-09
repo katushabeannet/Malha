@@ -66,3 +66,60 @@
     font-weight: 500;
   }
   
+  /* Responsive design for tablets and smaller devices */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 28px;
+  }
+
+  .about-hero p {
+    font-size: 16px;
+  }
+
+  .about-content {
+    padding: 30px 15px;
+  }
+
+  .company-overview h2,
+  .team-intro h2,
+  .core-values h2 {
+    font-size: 24px;
+  }
+
+  .mission-vision {
+    flex-direction: column;
+  }
+
+  .mission-vision .box {
+    flex: 1 1 100%;
+  }
+}
+
+/* Even smaller devices (phones) */
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 40px 10px;
+  }
+
+  .about-hero h1 {
+    font-size: 24px;
+  }
+
+  .about-hero p {
+    font-size: 14px;
+  }
+
+  .about-content {
+    padding: 20px 10px;
+  }
+
+  .company-overview h2,
+  .team-intro h2,
+  .core-values h2 {
+    font-size: 20px;
+  }
+
+  .core-values li {
+    font-size: 14px;
+  }
+}

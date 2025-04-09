@@ -62,3 +62,63 @@ header {
     color: #b1cdbc;
   }
   
+ /* Hamburger icon */
+
+.menu-toggle {
+  display: none;
+  font-size: 32px;
+  color: white; /* Bright white for visibility */
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 10px;
+}
+
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    position: relative;
+  }
+  
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #1b2c20;
+    padding: 10px 0;
+  }
+
+  nav a {
+    padding: 10px 20px;
+    border-top: 1px solid #2c4d32;
+  }
+
+  .menu-toggle {
+    display: block;
+    top: 25px;
+    z-index: 1000;
+    position: absolute;
+    right: 20px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+}
+
+/* Footer responsiveness (optional polish) */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+}
