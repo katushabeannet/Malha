@@ -1,20 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Destinations | Malha Tours and TravelAfrica Limited</title>
-  <link rel="stylesheet" href="css/destinations.css" />
-  <link rel="stylesheet" href="css/navfoot.css" />
+  <link rel="stylesheet" href="css/destinations.css">
+  <link rel="shortcut icon" href="images/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
+  <link rel="stylesheet" href="css/navfoot.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
+  <!-- Loading Animation -->
+  <div class="loading" id="loading">
+    <div class="loading-spinner"></div>
+  </div>
 
   <!-- Navbar -->
-  <!-- Navbar -->
-<header>
+  <header>
     <div class="logo">
-      <img src="images/logo2.png" alt="Malha Logo" />
+      <img src="images/logo2.png" alt="Malha Logo">
     </div>
     <button class="menu-toggle" id="menu-toggle">&#9776;</button>
     <nav id="nav-menu">
@@ -25,7 +31,6 @@
       <a href="booking.html">Booking</a>
     </nav>
   </header>
-  
 
   <!-- Hero Section -->
   <section class="hero">
@@ -33,66 +38,231 @@
     <p>Whether you're seeking adventure, wildlife, history, or relaxation — Africa has it all. Start your journey with us!</p>
   </section>
 
+  <!-- Filter Controls -->
+  <div class="filter-controls">
+    <h3>Find Your Perfect Destination</h3>
+    <div class="search-container">
+      <input type="text" id="destination-search" placeholder="Search destinations...">
+      <button id="search-btn"><i class="fas fa-search"></i></button>
+    </div>
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="wildlife">Wildlife</button>
+      <button class="filter-btn" data-filter="beach">Beaches</button>
+      <button class="filter-btn" data-filter="culture">Culture</button>
+      <button class="filter-btn" data-filter="adventure">Adventure</button>
+      <button class="filter-btn" data-filter="history">Historical</button>
+    </div>
+  </div>
+
   <!-- Destinations Grid -->
   <section class="destinations">
-    <div class="destination-card">
+    <div class="destination-card" data-category="wildlife adventure">
+      <span class="destination-tag">Wildlife</span>
       <img src="images/kenya.jpg" alt="Kenya">
       <h2>Kenya</h2>
       <p>Experience the Great Migration at Maasai Mara and stunning wildlife in Amboseli and Tsavo parks.</p>
     </div>
-    <div class="destination-card">
+
+    <div class="destination-card" data-category="wildlife adventure">
+      <span class="destination-tag">Wildlife</span>
       <img src="images/uganda.jpg" alt="Uganda">
       <h2>Uganda</h2>
-      <p>Track mountain gorillas in Bwindi, sail on the Nile, and explore the Pearl of Africa’s natural beauty.</p>
+      <p>Track mountain gorillas in Bwindi, sail on the Nile, and explore the Pearl of Africa's natural beauty.</p>
     </div>
-    <div class="destination-card">
+
+    <div class="destination-card" data-category="history culture">
+      <span class="destination-tag">Historical</span>
       <img src="images/egypt.jpg" alt="Egypt">
       <h2>Egypt</h2>
       <p>Marvel at the pyramids, ride camels in the desert, and explore ancient temples along the Nile.</p>
     </div>
-    <div class="destination-card">
+
+    <div class="destination-card" data-category="wildlife beach adventure">
+      <span class="destination-tag">Diverse</span>
       <img src="images/south.jpg" alt="South Africa">
       <h2>South Africa</h2>
       <p>Discover Cape Town, Table Mountain, and Big 5 safaris in Kruger National Park.</p>
     </div>
-    <div class="destination-card">
+
+    <div class="destination-card" data-category="culture adventure">
+      <span class="destination-tag">Cultural</span>
       <img src="images/morocco.jpg" alt="Morocco">
       <h2>Morocco</h2>
       <p>Roam through Marrakech markets, Sahara dunes, and the blue city of Chefchaouen.</p>
     </div>
-    <div class="destination-card">
+
+    <div class="destination-card" data-category="wildlife beach adventure">
+      <span class="destination-tag">Wildlife</span>
       <img src="images/tanzania.jpg" alt="Tanzania">
       <h2>Tanzania</h2>
       <p>Climb Mt. Kilimanjaro, enjoy Serengeti safaris, or relax on Zanzibar beaches.</p>
     </div>
-    <div class="destination-card">
+
+    <div class="destination-card" data-category="culture history">
+      <span class="destination-tag">Cultural</span>
       <img src="images/nigeria.jpg" alt="Nigeria">
       <h2>Nigeria</h2>
       <p>Visit Olumo Rock, the Osun Sacred Grove, and explore rich African culture in Lagos.</p>
     </div>
-    <div class="destination-card">
+
+    <div class="destination-card" data-category="wildlife adventure">
+      <span class="destination-tag">Wildlife</span>
       <img src="images/rwanda.jpg" alt="Rwanda">
       <h2>Rwanda</h2>
       <p>Known for its clean cities and mountain gorilla trekking in Volcanoes National Park.</p>
     </div>
-    <div class="destination-card">
+
+    <div class="destination-card" data-category="adventure">
+      <span class="destination-tag">Adventure</span>
       <img src="images/namibia.jpg" alt="Namibia">
       <h2>Namibia</h2>
-      <p>Adventure into Sossusvlei dunes, Skeleton Coast, and Etosha’s desert wildlife.</p>
+      <p>Adventure into Sossusvlei dunes, Skeleton Coast, and Etosha's desert wildlife.</p>
     </div>
-    <div class="destination-card">
+
+    <div class="destination-card" data-category="culture history beach">
+      <span class="destination-tag">Cultural</span>
       <img src="images/ghana.jpg" alt="Ghana">
       <h2>Ghana</h2>
       <p>Learn African history at Cape Coast Castle and enjoy rich culture in Accra and beyond.</p>
     </div>
   </section>
 
+  <!-- Map Section -->
+  <section class="map-section">
+    <h2>Discover Africa's Treasures</h2>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30673285.61650211!2d-10.45525752845!3d-1.3182767782325926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10a06c0a948cf5d5%3A0x108270c99e90f0b3!2sAfrica!5e0!3m2!1sen!2sus!4v1623412398225!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="destination-stats">
+      <div class="stat-item">
+        <div class="stat-number">54</div>
+        <div class="stat-label">Countries</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">3,000+</div>
+        <div class="stat-label">Unique Experiences</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">1,000+</div>
+        <div class="stat-label">Happy Travelers</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Section -->
+  <section class="category-section">
+    <h2>Travel Experiences</h2>
+    <div class="categories">
+      <div class="category-card">
+        <img src="images/t.PNG" alt="Safari">
+        <h3>Safari Adventures</h3>
+        <p>Experience the thrill of seeing Africa's majestic wildlife in their natural habitat.</p>
+      </div>
+      <div class="category-card">
+        <img src="images/south.jpg" alt="Cultural">
+        <h3>Cultural Immersion</h3>
+        <p>Connect with local communities and experience authentic African traditions.</p>
+      </div>
+      <div class="category-card">
+        <img src="images/kenya.jpg" alt="Beach">
+        <h3>Beach Getaways</h3>
+        <p>Relax on pristine beaches with crystal clear waters and golden sands.</p>
+      </div>
+      <div class="category-card">
+        <img src="images/home8.jpg" alt="Adventure">
+        <h3>Adventure Tours</h3>
+        <p>From mountain climbing to desert trekking, find your perfect adventure.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="destination-testimonials">
+    <h2>What Our Travelers Say</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial-slide active">
+        <p class="testimonial-quote">"Our safari in Kenya was absolutely magical. The guides were knowledgeable, and we saw all of the Big Five! Malha Tours made our dream vacation a reality."</p>
+        <div class="testimonial-author">
+          <img src="images/maguy.jpg" alt="Annet K.">
+          <div class="author-info">
+            <h4>Annet K.</h4>
+            <p>Kenya Safari, 2023</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-slide">
+        <p class="testimonial-quote">"Climbing Kilimanjaro with Malha Tours was the adventure of a lifetime. The team's support made it possible for me to reach the summit. Unforgettable!"</p>
+        <div class="testimonial-author">
+          <img src="images/maguy.jpg" alt="Albert N.">
+          <div class="author-info">
+            <h4>Albert N.</h4>
+            <p>Tanzania Trek, 2022</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-slide">
+        <p class="testimonial-quote">"Our cultural tour through Morocco was eye-opening and beautiful. The local experiences arranged by Malha were authentic and respectful. Highly recommend!"</p>
+        <div class="testimonial-author">
+          <img src="images/maguy.jpg" alt="Vawzen K.">
+          <div class="author-info">
+            <h4>Vawzen K.</h4>
+            <p>Morocco Tour, 2023</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-controls">
+        <div class="testimonial-dot active" data-slide="0"></div>
+        <div class="testimonial-dot" data-slide="1"></div>
+        <div class="testimonial-dot" data-slide="2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-container">
+    <h2>Ready to Explore Africa?</h2>
+    <p>Let us help you plan the perfect African adventure tailored to your interests, budget, and travel style.</p>
+    <a href="booking.html" class="cta-btn">Start Planning Your Journey</a>
+  </section>
+
+  <!-- Destination Details Modal -->
+  <div class="modal" id="destination-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img id="modal-img" src="" alt="Destination">
+        <h2 id="modal-title"></h2>
+        <div class="close-modal" id="close-modal">&times;</div>
+      </div>
+      <div class="modal-body">
+        <p id="modal-description"></p>
+        <h3>Top Attractions</h3>
+        <div class="attractions-list" id="attractions-list">
+          <!-- Attractions will be added dynamically -->
+        </div>
+        <h3>Best Time to Visit</h3>
+        <p id="modal-best-time"></p>
+        <h3>Travel Tips</h3>
+        <p id="modal-tips"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <div class="scroll-top" id="scroll-top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
   <!-- Closing Statement -->
   <section class="closing">
     <div class="closing-text">
       <h2>More Adventures Await</h2>
       <p>
-        These are just a few of the amazing destinations we offer. At Malha Tours and TravelAfrica Limited, we help you explore **anywhere in Africa** — your dream journey awaits! Contact us to personalize your tour today.
+        These are just a few of the amazing destinations we offer. At Malha Tours and TravelAfrica Limited, we help you explore anywhere in Africa — your dream journey awaits! Contact us to personalize your tour today.
       </p>
     </div>
     <div class="closing-img">
@@ -102,41 +272,246 @@
 
   <!-- Footer -->
   <footer>
-    <div>
-      <h4>Find us here</h4>
-      <p>
-        <a href="#">Facebook</a> | <a href="#">Instagram</a>
-      </p>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Find us here</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Contact us</h4>
+        <p><i class="fas fa-phone"></i> 0765954388</p>
+        <p><i class="fas fa-phone"></i> 0759100141</p>
+        <p><i class="fas fa-phone"></i> 0753293589</p>
+        <p><i class="fas fa-envelope"></i> maihatours@gmail.com</p>
+      </div>
+      <div class="footer-column">
+        <h4>Location</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Munyonyo, Uganda</p>
+        <p>Olives Complex</p>
+        <p>Ground floor, Office 005</p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destination.html">Destinations</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="booking.html">Book Now</a></li>
+        </ul>
+      </div>
     </div>
-    <div>
-      <h4>Contact us</h4>
-      <p>You can reach us on:</p>
-      <p>076595488</p>
-      <p>0759100141</p>
-      <p>0753293589</p>
-      <p>maihatours@gmail.com</p>
-    </div>
-    <div>
-      <h4>Location</h4>
-      <p>Munyonyo, Uganda</p>
-      <p>Olives Complex</p>
-      <p>Ground floor, Office 005</p>
-    </div>
-  
     <div class="footer-bottom">
-      <p>All Rights Reserved to Malha Tours and Travel Africa Limited</p>
+      <p>&copy; 2023 All Rights Reserved to Malha Tours and Travel Africa Limited</p>
     </div>
   </footer>
 
+  <!-- JavaScript for the page functionality -->
   <script>
     const toggle = document.getElementById("menu-toggle");
     const nav = document.getElementById("nav-menu");
-  
+    
     toggle.addEventListener("click", () => {
       nav.classList.toggle("active");
     });
+
+    window.addEventListener('load', function() {
+      const loading = document.getElementById('loading');
+      setTimeout(() => {
+        loading.classList.add('hidden');
+      }, 1000);
+    });
+
+    const scrollTopBtn = document.getElementById('scroll-top');
+    
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    });
+    
+    scrollTopBtn.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const destinationCards = document.querySelectorAll('.destination-card');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+
+        this.classList.add('active');
+        
+        const filter = this.getAttribute('data-filter');
+        
+        destinationCards.forEach(card => {
+          if (filter === 'all') {
+            card.style.display = 'block';
+          } else {
+            const categories = card.getAttribute('data-category');
+            if (categories.includes(filter)) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+
+    const searchInput = document.getElementById('destination-search');
+    const searchBtn = document.getElementById('search-btn');
+    
+    function performSearch() {
+      const searchTerm = searchInput.value.toLowerCase();
+      
+      destinationCards.forEach(card => {
+        const title = card.querySelector('h2').textContent.toLowerCase();
+        const description = card.querySelector('p').textContent.toLowerCase();
+        
+        if (title.includes(searchTerm) || description.includes(searchTerm)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+    
+    searchBtn.addEventListener('click', performSearch);
+    searchInput.addEventListener('keyup', function(e) {
+      if (e.key === 'Enter') {
+        performSearch();
+      }
+    });
+
+    const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+    const testimonialDots = document.querySelectorAll('.testimonial-dot');
+    
+    testimonialDots.forEach(dot => {
+      dot.addEventListener('click', function() {
+        const slideIndex = this.getAttribute('data-slide');
+
+        testimonialSlides.forEach(slide => {
+          slide.classList.remove('active');
+        });
+
+        testimonialDots.forEach(dot => {
+          dot.classList.remove('active');
+        });
+
+        testimonialSlides[slideIndex].classList.add('active');
+        this.classList.add('active');
+      });
+    });
+
+    let currentSlide = 0;
+    
+    function rotateTestimonials() {
+      currentSlide = (currentSlide + 1) % testimonialSlides.length;
+
+      testimonialSlides.forEach(slide => {
+        slide.classList.remove('active');
+      });
+
+      testimonialDots.forEach(dot => {
+        dot.classList.remove('active');
+      });
+
+      testimonialSlides[currentSlide].classList.add('active');
+      testimonialDots[currentSlide].classList.add('active');
+    }
+
+    setInterval(rotateTestimonials, 5000);
+
+    const modal = document.getElementById('destination-modal');
+    const closeModal = document.getElementById('close-modal');
+
+    const destinationData = {
+      'kenya': {
+        title: 'Kenya',
+        image: 'images/kenya.jpg',
+        description: 'Kenya is a world-renowned safari destination, home to the iconic Maasai Mara where the Great Migration takes place annually. Beyond wildlife, Kenya offers beautiful beaches along its coast, vibrant culture, and stunning landscapes from the Great Rift Valley to Mount Kenya.',
+        attractions: [
+          { name: 'Maasai Mara', icon: 'fa-paw' },
+          { name: 'Amboseli National Park', icon: 'fa-mountain' },
+          { name: 'Nairobi', icon: 'fa-city' },
+          { name: 'Lamu Island', icon: 'fa-umbrella-beach' },
+          { name: 'Lake Nakuru', icon: 'fa-water' },
+          { name: 'Mount Kenya', icon: 'fa-hiking' }
+        ],
+        bestTime: 'The best time to visit Kenya for wildlife viewing is during the dry seasons (January-March and July-October). The Great Migration reaches the Maasai Mara between July and October.',
+        tips: 'Bring lightweight, neutral-colored clothing for safaris. Don\'t forget a good camera with zoom lens, binoculars, and sun protection. Yellow fever vaccination is required for entry.'
+      },
+      'uganda': {
+        title: 'Uganda',
+        image: 'images/uganda.jpg',
+        description: 'Uganda, the "Pearl of Africa," is a lush country with incredible biodiversity. It\'s one of the few places where you can track endangered mountain gorillas in their natural habitat. The country offers diverse landscapes from the source of the Nile to the snow-capped Rwenzori Mountains.',
+        attractions: [
+          { name: 'Bwindi Impenetrable Forest', icon: 'fa-tree' },
+          { name: 'Murchison Falls', icon: 'fa-water' },
+          { name: 'Queen Elizabeth National Park', icon: 'fa-paw' },
+          { name: 'Lake Victoria', icon: 'fa-water' },
+          { name: 'Kibale Forest', icon: 'fa-leaf' },
+          { name: 'Rwenzori Mountains', icon: 'fa-mountain' }
+        ],
+        bestTime: 'The best time to visit Uganda is during the dry seasons (December-February and June-August), when trekking conditions are optimal and wildlife viewing is best.',
+        tips: 'Gorilla permits should be booked well in advance. Pack for variable weather conditions, including rain gear even in dry seasons. Bring sturdy hiking boots for gorilla trekking.'
+      },
+    };
+    
+    exploreButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const destination = this.getAttribute('data-destination');
+        const data = destinationData[destination];
+        
+        if (data) {
+          document.getElementById('modal-img').src = data.image;
+          document.getElementById('modal-title').textContent = data.title;
+          document.getElementById('modal-description').textContent = data.description;
+          document.getElementById('modal-best-time').textContent = data.bestTime;
+          document.getElementById('modal-tips').textContent = data.tips;
+
+          const attractionsList = document.getElementById('attractions-list');
+          attractionsList.innerHTML = '';
+          
+          data.attractions.forEach(attraction => {
+            const attractionItem = document.createElement('div');
+            attractionItem.className = 'attraction-item';
+            attractionItem.innerHTML = `
+              <i class="fas ${attraction.icon}"></i>
+              <p>${attraction.name}</p>
+            `;
+            attractionsList.appendChild(attractionItem);
+          });
+
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+    
+    closeModal.addEventListener('click', function() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
   </script>
-  
-  
 </body>
 </html>

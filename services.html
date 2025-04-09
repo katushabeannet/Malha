@@ -3,12 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Services | Malha Tours and TravelAfrica Limited</title>
+  <title>Our Services | Malha Tours and Travel Africa Limited</title>
+  <link rel="shortcut icon" href="images/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="css/navfoot.css" />
   <link rel="stylesheet" href="css/services.css" />
 </head>
-
 <body>
+  <!-- Loading Animation -->
+  <div class="loading" id="loading">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <div class="scroll-top" id="scroll-top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
 
   <!-- Navbar -->
   <header>
@@ -40,7 +51,6 @@
         <p>We help you navigate the visa application process quickly and stress-free.</p>
       </div>
     </div>
-
     <div class="service">
       <img src="images/airticket.jpeg" alt="Air Ticketing">
       <div class="service-content">
@@ -48,7 +58,6 @@
         <p>Domestic and international flight booking made simple, secure, and affordable.</p>
       </div>
     </div>
-
     <div class="service">
       <img src="images/country.jpg" alt="Country Tours">
       <div class="service-content">
@@ -56,7 +65,6 @@
         <p>From safaris to city tours – experience Africa's richness with guided travel plans.</p>
       </div>
     </div>
-
     <div class="service">
       <img src="images/hotel.jpg" alt="Hotel Booking">
       <div class="service-content">
@@ -64,7 +72,6 @@
         <p>Get the best rates and comfortable stays for all your travel destinations.</p>
       </div>
     </div>
-
     <div class="service">
       <img src="images/t.PNG" alt="Holiday Packages">
       <div class="service-content">
@@ -72,7 +79,6 @@
         <p>Exciting all-inclusive holiday plans for individuals, couples, and families.</p>
       </div>
     </div>
-
     <div class="service">
       <img src="images/pichup.png" alt="Airport Pickups">
       <div class="service-content">
@@ -80,7 +86,6 @@
         <p>Reliable airport transfers to ensure you reach your destination hassle-free.</p>
       </div>
     </div>
-
     <div class="service">
       <img src="images/passport.jpg" alt="Passport Processing">
       <div class="service-content">
@@ -88,7 +93,6 @@
         <p>Professional help in acquiring or renewing your passport without delays.</p>
       </div>
     </div>
-
     <div class="service">
       <img src="images/internship.jpeg" alt="Internship Training">
       <div class="service-content">
@@ -96,7 +100,6 @@
         <p>We connect you with hands-on internship opportunities across various sectors.</p>
       </div>
     </div>
-
     <div class="service">
       <img src="images/education tors.jpeg" alt="Education Tours">
       <div class="service-content">
@@ -108,40 +111,112 @@
 
   <!-- Footer -->
   <footer>
-    <div>
-      <h4>Find us here</h4>
-      <p>
-        <a href="#">Facebook</a> | <a href="#">Instagram</a>
-      </p>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Find us here</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Contact us</h4>
+        <p><i class="fas fa-phone"></i> 076595488</p>
+        <p><i class="fas fa-phone"></i> 0759100141</p>
+        <p><i class="fas fa-phone"></i> 0753293589</p>
+        <p><i class="fas fa-envelope"></i> maihatours@gmail.com</p>
+      </div>
+      <div class="footer-column">
+        <h4>Location</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Munyonyo, Uganda</p>
+        <p>Olives Complex</p>
+        <p>Ground floor, Office 005</p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destination.html">Destinations</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="booking.html">Book Now</a></li>
+        </ul>
+      </div>
     </div>
-    <div>
-      <h4>Contact us</h4>
-      <p>You can reach us on:</p>
-      <p>076595488</p>
-      <p>0759100141</p>
-      <p>0753293589</p>
-      <p>maihatours@gmail.com</p>
-    </div>
-    <div>
-      <h4>Location</h4>
-      <p>Munyonyo, Uganda</p>
-      <p>Olives Complex</p>
-      <p>Ground floor, Office 005</p>
-    </div>
-  
     <div class="footer-bottom">
-      <p>All Rights Reserved to Malha Tours and Travel Africa Limited</p>
+      <p>&copy; 2023 All Rights Reserved to Malha Tours and Travel Africa Limited</p>
     </div>
   </footer>
+
   <script>
     const toggle = document.getElementById("menu-toggle");
     const nav = document.getElementById("nav-menu");
-  
+    
     toggle.addEventListener("click", () => {
       nav.classList.toggle("active");
     });
+
+    window.addEventListener('load', function() {
+      const loading = document.getElementById('loading');
+      setTimeout(() => {
+        loading.classList.add('hidden');
+      }, 1000);
+    });
+
+    const scrollTopBtn = document.getElementById('scroll-top');
+    
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    });
+    
+    scrollTopBtn.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    const services = document.querySelectorAll('.service');
+    
+    function checkScroll() {
+      const triggerBottom = window.innerHeight * 0.8;
+      
+      services.forEach(service => {
+        const serviceTop = service.getBoundingClientRect().top;
+        
+        if (serviceTop < triggerBottom) {
+          service.style.opacity = '1';
+          service.style.transform = 'translateY(0)';
+        }
+      });
+    }
+
+    services.forEach(service => {
+      service.style.opacity = '0';
+      service.style.transform = 'translateY(50px)';
+      service.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    });
+    
+    window.addEventListener('scroll', checkScroll);
+
+    window.addEventListener('load', checkScroll);
+
+    services.forEach(service => {
+      service.addEventListener('mouseenter', function() {
+        this.querySelector('h3').style.transform = 'translateX(10px)';
+        this.querySelector('h3').style.transition = 'transform 0.3s ease';
+      });
+      
+      service.addEventListener('mouseleave', function() {
+        this.querySelector('h3').style.transform = 'translateX(0)';
+      });
+    });
   </script>
-  
-  
 </body>
 </html>

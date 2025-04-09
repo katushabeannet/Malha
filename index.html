@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=2.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Malha Tours and TravelAfrica Limited</title>
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <link rel="shortcut icon" href="images/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
   <link rel="stylesheet" href="css/home.css" />
   <link rel="stylesheet" href="css/navfoot.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
   <!-- Header -->
   <!-- Navbar -->
   <header>
@@ -26,108 +29,213 @@
     </nav>
   </header>
 
-
-  <!-- Slider -->
-  <div class="slider" id="slider">
-    <img src="images/hom.png" alt="Slide 1" class="active">
-    <img src="images/plane.jpeg" alt="Slide 2">
-    <img src="images/home10.png" alt="Slide 3">
-    <img src="images/tanzania.jpg" alt="Slide 4">
-    <img src="images/home5.jpg" alt="Slide 4">
-    <img src="images/country.jpg" alt="Slide 4">
-    <img src="images/home7.jpg" alt=" 4">
-    
-    <!-- Add more images if needed -->
-  </div>
+  <!-- Hero Section with Slider -->
+  <section class="hero">
+    <div class="slider" id="slider">
+      <img src="images/hom.png" alt="Slide 1" class="active">
+      <img src="images/plane.jpeg" alt="Slide 2">
+      <img src="images/home10.png" alt="Slide 3">
+      <img src="images/tanzania.jpg" alt="Slide 4">
+      <img src="images/home5.jpg" alt="Slide 5">
+      <img src="images/country.jpg" alt="Slide 6">
+      <img src="images/home7.jpg" alt="Slide 7">
+    </div>
+    <div class="hero-content-container">
+      <div class="hero-content active" id="hero-content-1">
+        <h1>Discover Africa's Beauty</h1>
+        <p>Unforgettable journeys across the continent</p>
+        <a href="booking.html" class="cta-button">Plan Your Trip</a>
+      </div>
+      <div class="hero-content" id="hero-content-2">
+        <h1>Fly to Your Dream Destination</h1>
+        <p>Exclusive flight deals to anywhere in Africa</p>
+        <a href="services.html#flights" class="cta-button">Book Flights</a>
+      </div>
+      <div class="hero-content" id="hero-content-3">
+        <h1>Experience Authentic Culture</h1>
+        <p>Immerse yourself in local traditions and customs</p>
+        <a href="destination.html" class="cta-button">Explore Cultures</a>
+      </div>
+      <div class="hero-content" id="hero-content-4">
+        <h1>Tanzania Safari Adventures</h1>
+        <p>Witness the great migration in Serengeti</p>
+        <a href="destination.html#tanzania" class="cta-button">Safari Packages</a>
+      </div>
+      <div class="hero-content" id="hero-content-5">
+        <h1>Luxury Beach Getaways</h1>
+        <p>Relax on pristine African beaches</p>
+        <a href="services.html#beach" class="cta-button">Beach Holidays</a>
+      </div>
+      <div class="hero-content" id="hero-content-6">
+        <h1>Rural African Experiences</h1>
+        <p>Connect with nature and local communities</p>
+        <a href="services.html#rural" class="cta-button">Rural Tours</a>
+      </div>
+      <div class="hero-content" id="hero-content-7">
+        <h1>Adventure Awaits</h1>
+        <p>Thrilling experiences for the bold traveler</p>
+        <a href="services.html#adventure" class="cta-button">Adventure Tours</a>
+      </div>
+    </div>
+  </section>
 
   <!-- Intro -->
-  <div class="intro">
-    <h2>Welcome to Malha Tours and TravelAfrica Limited</h2>
-    <p>Your trusted partner in exploring Africa's beauty and beyond!</p>
-  </div>
+  <section class="intro">
+    <div class="container">
+      <h2>Welcome to Malha Tours and TravelAfrica Limited</h2>
+      <p>Your trusted partner in exploring Africa's beauty and beyond!</p>
+      
+      <!-- Featured Services -->
+      <div class="services-highlight">
+        <div class="service-card">
+          <i class="fas fa-plane"></i>
+          <h3>Flight Bookings</h3>
+          <p>Best deals on international and domestic flights</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-hotel"></i>
+          <h3>Accommodations</h3>
+          <p>Luxury to budget-friendly stays across Africa</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-route"></i>
+          <h3>Guided Tours</h3>
+          <p>Expert-led adventures to iconic destinations</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-car"></i>
+          <h3>Transportation</h3>
+          <p>Reliable transport services for your journey</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Destinations -->
+  <section class="popular-destinations">
+    <div class="container">
+      <h2>Popular Destinations</h2>
+      <div class="destination-cards">
+        <div class="destination-card">
+          <img src="images/tanzania.jpg" alt="Tanzania">
+          <div class="destination-info">
+            <h3>Tanzania</h3>
+            <p>Experience the Serengeti and Zanzibar</p>
+            <a href="destination.html#tanzania" class="btn-explore">Explore</a>
+          </div>
+        </div>
+        <div class="destination-card">
+          <img src="images/morocco.jpg" alt="Morocco">
+          <div class="destination-info">
+            <h3>Morocco</h3>
+            <p>Discover ancient medinas and desert landscapes</p>
+            <a href="destination.html#morocco" class="btn-explore">Explore</a>
+          </div>
+        </div>
+        <div class="destination-card">
+          <img src="images/ghana.jpg" alt="Ghana">
+          <div class="destination-info">
+            <h3>Ghana</h3>
+            <p>Rich culture and historical coastal forts</p>
+            <a href="destination.html#ghana" class="btn-explore">Explore</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Gallery -->
-  <div class="gallery">
-    <img src="images/plane.jpeg" alt="Destination 1">
-    <img src="images/t.PNG" alt="Destination 2">
-    <img src="images/land.jpeg" alt="Destination 3">
-    <img src="images/tour.PNG" alt="Destination 4">
-    <img src="images/home1.jpg" alt="Destination 4">
-    <img src="images/home9.jpg" alt="Destination 4">
-    <img src="images/home7.jpg" alt="Destination 4">
-    <img src="images/home5.jpg" alt="Destination 4">
-    <img src="images/home3.jpg" alt="Destination 4">
-    <img src="images/home2.jpg" alt="Destination 4">
-    <img src="images/home8.jpg" alt="Destination 4">
-    <img src="images/africa1.jpg" alt="Destination 4">
-    <img src="images/ghana.jpg" alt="Destination 4">
-    <img src="images/morocco.jpg" alt="Destination 4">
-    <img src="images/education tors.jpeg" alt="Destination 4">
-  </div>
+  <section class="gallery-section">
+    <div class="container">
+      <h2>Explore Africa Through Our Lens</h2>
+      <div class="gallery">
+        <img src="images/plane.jpeg" alt="Destination 1" class="gallery-img">
+        <img src="images/t.PNG" alt="Destination 2" class="gallery-img">
+        <img src="images/land.jpeg" alt="Destination 3" class="gallery-img">
+        <img src="images/tour.PNG" alt="Destination 4" class="gallery-img">
+        <img src="images/home1.jpg" alt="Destination 5" class="gallery-img">
+        <img src="images/home9.jpg" alt="Destination 6" class="gallery-img">
+        <img src="images/home7.jpg" alt="Destination 7" class="gallery-img">
+        <img src="images/home5.jpg" alt="Destination 8" class="gallery-img">
+        <img src="images/home3.jpg" alt="Destination 9" class="gallery-img">
+        <img src="images/home2.jpg" alt="Destination 10" class="gallery-img">
+        <img src="images/home8.jpg" alt="Destination 11" class="gallery-img">
+        <img src="images/africa1.jpg" alt="Destination 12" class="gallery-img">
+      </div>
+      <a href="#" class="view-more">View More Photos</a>
+    </div>
+  </section>
 
   <!-- About -->
-  <div class="about">
-    <h3>About Malha Tours</h3>
-    <p>We specialize in crafting unforgettable travel experiences across Africa with personalized packages, expert guides, and unmatched service.</p>
-    <button onclick="window.location.href='about.html'">Read More</button>
-  </div>
+  <section class="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>About Malha Tours</h2>
+          <p>We specialize in crafting unforgettable travel experiences across Africa with personalized packages, expert guides, and unmatched service.</p>
+          <p>With over 10 years of experience, our team of travel experts knows Africa like no other. We're committed to sustainable tourism that benefits local communities while providing you with authentic experiences.</p>
+          <a href="about.html" class="btn-about">Read More</a>
+        </div>
+        <div class="about-image">
+          <img src="images/logo1.PNG" alt="Our Team">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>Get the latest travel deals, destination insights, and exclusive offers directly to your inbox.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
 
   <!-- Footer -->
-<footer>
-  <div>
-    <h4>Find us here</h4>
-    <p>
-      <a href="#">Facebook</a> | <a href="#">Instagram</a>
-    </p>
-  </div>
-  <div>
-    <h4>Contact us</h4>
-    <p>You can reach us on:</p>
-    <p>076595488</p>
-    <p>0759100141</p>
-    <p>0753293589</p>
-    <p>maihatours@gmail.com</p>
-  </div>
-  <div>
-    <h4>Location</h4>
-    <p>Munyonyo, Uganda</p>
-    <p>Olives Complex</p>
-    <p>Ground floor, Office 005</p>
-  </div>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Find us here</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Contact us</h4>
+        <p><i class="fas fa-phone"></i> 076595488</p>
+        <p><i class="fas fa-phone"></i> 0759100141</p>
+        <p><i class="fas fa-phone"></i> 0753293589</p>
+        <p><i class="fas fa-envelope"></i> maihatours@gmail.com</p>
+      </div>
+      <div class="footer-column">
+        <h4>Location</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Munyonyo, Uganda</p>
+        <p>Olives Complex</p>
+        <p>Ground floor, Office 005</p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destination.html">Destinations</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="booking.html">Book Now</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 All Rights Reserved to Malha Tours and Travel Africa Limited</p>
+    </div>
+  </footer>
 
-  <div class="footer-bottom">
-    <p>All Rights Reserved to Malha Tours and Travel Africa Limited</p>
-  </div>
-</footer>
-
-  <!-- Slider Script -->
-  <script>
-    const slides = document.querySelectorAll('.slider img');
-    let current = 0;
-
-    setInterval(() => {
-      slides[current].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
-    }, 2000);
-  </script>
-  <script>
-    const toggle = document.getElementById("menu-toggle");
-    const nav = document.getElementById("nav-menu");
-  
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("active");
-    });
-  </script>
-  <!-- <script>
-    const toggle = document.getElementById('menu-toggle');
-    const nav = document.getElementById('nav-menu');
-  
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('show');
-    });
-  </script> -->
-  
-  
+  <script src="main.js"></script>
 </body>
 </html>

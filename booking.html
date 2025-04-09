@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Booking | Malha Tours and Travel Africa</title>
+  <link rel="shortcut icon" href="images/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
   <link rel="stylesheet" href="css/booking.css" />
   <link rel="stylesheet" href="css/navfoot.css" />
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
 
@@ -158,34 +160,47 @@
 
   <!-- Footer -->
   <footer>
-    <div>
-      <h4>Find us here</h4>
-      <p>
-        <a href="#">Facebook</a> | <a href="#">Instagram</a>
-      </p>
-    </div>
-    <div>
-      <h4>Contact us</h4>
-      <p>You can reach us on:</p>
-      <p>076595488</p>
-      <p>0759100141</p>
-      <p>0753293589</p>
-      <p>maihatours@gmail.com</p>
-    </div>
-    <div>
-      <h4>Location</h4>
-      <p>Munyonyo, Uganda</p>
-      <p>Olives Complex</p>
-      <p>Ground floor, Office 005</p>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Find us here</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Contact us</h4>
+        <p><i class="fas fa-phone"></i> 076595488</p>
+        <p><i class="fas fa-phone"></i> 0759100141</p>
+        <p><i class="fas fa-phone"></i> 0753293589</p>
+        <p><i class="fas fa-envelope"></i> maihatours@gmail.com</p>
+      </div>
+      <div class="footer-column">
+        <h4>Location</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Munyonyo, Uganda</p>
+        <p>Olives Complex</p>
+        <p>Ground floor, Office 005</p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destination.html">Destinations</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="booking.html">Book Now</a></li>
+        </ul>
+      </div>
     </div>
     <div class="footer-bottom">
-      <p>All Rights Reserved to Malha Tours and Travel Africa Limited</p>
+      <p>&copy; 2023 All Rights Reserved to Malha Tours and Travel Africa Limited</p>
     </div>
   </footer>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <script>
     $(document).ready(function () {
       $('#country-select').select2({ placeholder: "Select Country", width: '100%' });
@@ -193,7 +208,6 @@
       $('#booking-form').on('submit', function (e) {
         e.preventDefault();
 
-        // Fill confirmation data
         $('#confirm-name').text($('#fname').val() + ' ' + $('#lname').val());
         $('#confirm-mobile').text($('#mobile').val());
         $('#confirm-email').text($('#email').val());
@@ -201,7 +215,6 @@
         $('#confirm-country').text($('#country-select').val());
         $('#confirm-description').text($('#description').val());
 
-        // Show confirmation
         $('.step').removeClass('active');
         $('.step').eq(1).addClass('active');
 
@@ -230,6 +243,48 @@
     toggle.addEventListener("click", () => {
       nav.classList.toggle("active");
     });
+  </script>
+  <script>
+$(document).ready(function() {
+  $('#country-select').select2({
+    placeholder: "Select Country",
+    width: '100%',
+    dropdownCssClass: 'select2-dropdown-custom'
+  });
+
+  $('#country-select').on('select2:open', function() {
+    setTimeout(function() {
+      const dropdown = $('.select2-dropdown');
+      dropdown.css({
+        'opacity': '1',
+        'visibility': 'visible',
+        'display': 'block'
+      });
+
+      $('.select2-results__options').css({
+        'max-height': '250px',
+        'color': window.matchMedia('(prefers-color-scheme: dark)').matches ? '#e0e0e0' : '#333'
+      });
+
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        dropdown.css('background-color', '#2d2d2d');
+        $('.select2-results').css('background-color', '#2d2d2d');
+        $('.select2-search--dropdown').css('background-color', '#2d2d2d');
+      }
+    }, 0);
+  });
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+    if ($('.select2-container--open').length) {
+      $('#country-select').select2('close');
+      $('#country-select').select2('open');
+    }
+  });
+
+  $('#country-select').on('select2:close', function() {
+    $(this).focus();
+  });
+});
   </script>
   
 </body>
