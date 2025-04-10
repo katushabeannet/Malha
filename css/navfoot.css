@@ -48,15 +48,33 @@ nav a:hover::after, nav a.active::after {
   width: 100%;
 }
 
-.menu-toggle {
+/* .menu-toggle {
   display: none;
-  background: none;
+  background-color: green;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
   color: white;
+} */
+
+.menu-toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
 }
 
+/* Hover and focus styles */
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
 /* Footer */
 footer {
   background-color: #222;
@@ -162,7 +180,7 @@ footer {
     top: 90px;
     left: 0;
     right: 0;
-    background-color: white;
+    background-color: green;
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
